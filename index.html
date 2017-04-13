@@ -16,9 +16,24 @@
   <script type="text/jsx">
 
     class TodoApp extends React.Component {
+      constructor(props) {
+        super(props);
+
+        this.state = {
+          items: []
+        };
+      }
+
+      updateItems(newItem) {
+        var allItems = this.state.items.concat([newItem]);
+        this.setState({items: allItems});
+      }
+
       render() {
         return (
-          <h1>Hello World!</h1>
+          <div>
+            <h1>Hello World</h1>
+          </div>
         )
       }
     }
