@@ -46,7 +46,15 @@
 
     class TodoList extends React.Component {
       render() {
-        return;
+        var createItem = function(itemText) {
+          return (
+            <TodoListItem>{itemText}</TodoListItem>
+          );
+        }
+
+        return (
+          <ul>{this.props.items.map(createItem)}</ul>
+        )
       }
     }
 
